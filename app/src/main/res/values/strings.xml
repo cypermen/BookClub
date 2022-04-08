@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BookClub</string>
+    <string name="fab_content_desc">Добавить новую книгу</string>
+
+    <string name="more">Подробнее...</string>
+    <string name="val">Количество</string>
+    <string name="title">Название книги</string>
+    <string name="author">Автор</string>
+    <string name="enter_end_time">Время окончания мероприятия</string>
+    <string name="enter_start_time">Время начала мероприятия</string>
+    <string name="enter_party_place">Введите место мероприятия</string>
+    <string name="enter_party_name">Введите название мероприятия*</string>
+    <string name="add_new_book">Добавить новую книгу</string>
+    <string name="party_images">Фотографии мероприятия</string>
+    <string name="party_members">Участники мероприятия</string>
+    <string name="description">Описание:</string>
+    <string name="placement">Местопроведение мероприятия:</string>
+    <string name="timing">Время проведения мероприятия</string>
+    <string name="start_time">Время начала:</string>
+    <string name="end_time">Время окончания:</string>
+</resources>

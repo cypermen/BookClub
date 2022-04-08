@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/partyList">
+
+    <fragment
+        android:id="@+id/partyList"
+        android:name="ru.realityfamily.partyapp.Presentation.View.PartyList"
+        android:label="party_list_fragment"
+        tools:layout="@layout/books_list_fragment" >
+        <action
+            android:id="@+id/action_partyList_to_addParty"
+            app:destination="@id/addParty"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_partyList_to_partyFragment"
+            app:destination="@id/partyFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addParty"
+        android:name="ru.realityfamily.partyapp.Presentation.View.AddParty"
+        android:label="add_party_fragment"
+        tools:layout="@layout/book_add_fragment" />
+    <fragment
+        android:id="@+id/partyFragment"
+        android:name="ru.realityfamily.partyapp.Presentation.View.PartyFragment"
+        android:label="party_fragment"
+        tools:layout="@layout/book_card" />
+</navigation>

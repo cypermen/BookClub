@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normalMargin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:minWidth="40dp"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/halfMargin"
+                    android:gravity="center_vertical"
+
+                    android:text="@string/add_new_book"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/party_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginVertical="@dimen/normalMargin"
+                android:hint="@string/enter_party_name"
+
+                android:textSize="20sp"
+                android:autofillHints="@string/enter_party_name"
+                android:inputType="text" />
+
+            <AutoCompleteTextView
+                android:id="@+id/party_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_party_place"
+                android:layout_marginBottom="@dimen/halfMargin"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/halfMargin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/halfMargin"/>
+
+            <EditText
+                android:id="@+id/party_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="@dimen/halfMargin"
+
+                android:inputType="textMultiLine"/>
+
+            <RelativeLayout
+                android:id="@+id/imagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/secondary">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normalMargin"
+                    android:text="@string/party_images"/>
+
+                <ImageView
+                    android:id="@+id/imageDropdownArrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/secondaryDark"
+                    android:padding="@dimen/halfMargin"
+                    android:src="@drawable/arrow_down" />
+            </RelativeLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="@dimen/halfMargin"
+                android:layout_marginBottom="@dimen/normalMargin"
+                android:background="@color/background_secondary"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
